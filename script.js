@@ -23,19 +23,20 @@ function writePassword() {
 function getRandomLower(){
   return String.char(Math.floor(Math.random() * 128) + 97);
 }
- console.log(getRandomLower)
 
 function getRandomUpper(){
   return String.char(Math.floor(Math.random() * 128) + 65);
 }
 
 function getRandomNumber(){
-  return (Math.random) * 128 +8;
+  return Math.floor((Math.random() * 128) +8);
 
 }
 function getRandomSpecial(){
-  return (symbols);
+  const symbols = '!#$%&*@';	
+  return (symbols[0]);
 }
+console.log(getRandomSpecial());
 
 //need prompt
 // var generatePassword = prompt("How many characters would you like your password to contain?")
