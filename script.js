@@ -21,11 +21,11 @@ function writePassword() {
 //   alert(Click OK to confirm including lowercase characters);...name getRandomLower
 //   alert(Click OK to confirm including uppercase characters.);...name getRandomUpper  
 function getRandomLower(){
-  return String.char(Math.floor(Math.random() * 128) + 97);
+  return String.char(Math.floor(Math.random() * 26) + 97);
 }
 
 function getRandomUpper(){
-  return String.char(Math.floor(Math.random() * 128) + 65);
+  return String.char(Math.floor(Math.random() * 26) + 65);
 }
 
 function getRandomNumber(){
