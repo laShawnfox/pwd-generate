@@ -2,8 +2,10 @@
 var generateBtn = document.querySelector("#generate");
 
 var containPassword = prompt("How many characters would you like your password to contain?");
-
-
+alert(Click OK to confirm including special characters.);
+alert(Click OK to confirm including numeric characters.);
+alert(Click OK to confirm including lowercase characters);
+alert(Click OK to confirm including uppercase characters.);
 
 
 // Write password to the #password input
