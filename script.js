@@ -1,9 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var generatePassword = prompt("How many characters would you like your password to contain?"){
-  alert("Click OK to confirm including special characters.");
-}
+var containPassword = prompt("How many characters would you like your password to contain?");
+
+
 
 
 // Write password to the #password input
@@ -15,44 +15,33 @@ function writePassword() {
 }
 //generate character functions https://net-comber.com/charset.html 
 //(https://owasp.org/www-community/password-special-characters) 
+
+//  alert(Click OK to confirm including special characters.);...name getRandomSpecial
+// alert(Click OK to confirm including numeric characters.);....name  getRandomNUmber
+//   alert(Click OK to confirm including lowercase characters);...name getRandomLower
+//   alert(Click OK to confirm including uppercase characters.);...name getRandomUpper  
 function getRandomLower(){
   return String.char(Math.floor(Math.random() * 128) + 97);
 }
+ console.log(getRandomLower)
 
 function getRandomUpper(){
   return String.char(Math.floor(Math.random() * 128) + 65);
 }
 
+function getRandomNumber(){
+  return (Math.random) * 128 +8;
+
+}
 function getRandomSpecial(){
   return (symbols);
 }
 
 //need prompt
-// var generatePassword = prompt("How many characters would you like your password to contain?"){
-//  alert(Click OK to confirm including special characters.);
-// alert(Click OK to confirm including numeric characters.);....name  
-//   alert(Click OK to confirm including lowercase characters);...name getRandomLower
-//   alert(Click OK to confirm including uppercase characters.);...name getRandomUpper  
-//     }
-//https://net-comber.com/charset.html character sets
+// var generatePassword = prompt("How many characters would you like your password to contain?")
 
-// Generate functions (https://owasp.org/www-community/password-special-characters) 
-//   function getRandomLower(){
-//   return (Math.floor(Math.random()* 128));
-
-//   function getRandomUpper(){
-//   return (Math.floor(Math.random()* 128));
-
-//  console.log(getRandomLower());
-
-//  function getRandomSpecial(){
- //   return symbols[0];
-
-
-
-
-function generatePassword(){
-   return ("This will be replaced by my generated password."); 
+function generatePassword() {
+   return "This will be replaced by my generated password."; 
    }
 
 // Add event listener to generate button
