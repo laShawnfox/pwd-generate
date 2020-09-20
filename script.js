@@ -13,12 +13,14 @@ function writePassword() {
 
   passwordText.value = password;
 }
+//generate character functions https://net-comber.com/charset.html 
+//(https://owasp.org/www-community/password-special-characters) 
 function getRandomLower(){
-  return (Math.floor(Math.random() * 128));
+  return String.char(Math.floor(Math.random() * 128) + 97);
 }
 
 function getRandomUpper(){
-  return (Math.floor(Math.random() * 128));
+  return String.char(Math.floor(Math.random() * 128));
 }
 
 function getRandomSpecial(){
