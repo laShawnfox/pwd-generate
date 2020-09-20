@@ -20,7 +20,7 @@ function getRandomLower(){
 }
 
 function getRandomUpper(){
-  return String.char(Math.floor(Math.random() * 128));
+  return String.char(Math.floor(Math.random() * 128) + 65);
 }
 
 function getRandomSpecial(){
