@@ -1,7 +1,17 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var containPassword = prompt("How many characters would you like your password to contain?");
+//need prompt
+// var generatePassword = prompt("How many characters would you like your password to contain?")
+
+//  alert(Click OK to confirm including special characters.);...name getRandomSpecial
+// alert(Click OK to confirm including numeric characters.);....name  getRandomNUmber
+//   alert(Click OK to confirm including lowercase characters);...name getRandomLower
+//   alert(Click OK to confirm including uppercase characters.);...name getRandomUpper  
+function getRandomLower(){
+  var containPassword = prompt("How many characters would you like your password to contain?");
+//if password < 8
+// alert ("Password must be 8 more characters and no more than 128 characters!")
 alert("Click OK to confirm including special characters.");
 alert("Click OK to confirm including numeric characters.");
 alert("Click OK to confirm including lowercase characters");
@@ -18,10 +28,7 @@ function writePassword() {
 //generate character functions https://net-comber.com/charset.html 
 //(https://owasp.org/www-community/password-special-characters) 
 
-//  alert(Click OK to confirm including special characters.);...name getRandomSpecial
-// alert(Click OK to confirm including numeric characters.);....name  getRandomNUmber
-//   alert(Click OK to confirm including lowercase characters);...name getRandomLower
-//   alert(Click OK to confirm including uppercase characters.);...name getRandomUpper  
+
 function getRandomLower(){
   return String.char(Math.floor(Math.random() * 26) + 97);
 }
@@ -40,8 +47,7 @@ function getRandomSpecial(){
 }
 console.log(getRandomSpecial());
 
-//need prompt
-// var generatePassword = prompt("How many characters would you like your password to contain?")
+
 
 function generatePassword() {
    return "This will be replaced by my generated password."; 
