@@ -12,6 +12,7 @@ function getRandomLower(){
   var containPassword = prompt("How many characters would you like your password to contain?");
 //if password < 8
 // alert ("Password must be 8 more characters and no more than 128 characters!")
+//var containPassword = prompt("How many characters would you like your password to contain?");
 alert("Click OK to confirm including special characters.");
 alert("Click OK to confirm including numeric characters.");
 alert("Click OK to confirm including lowercase characters");
@@ -28,7 +29,7 @@ function writePassword() {
 //generate character functions https://net-comber.com/charset.html 
 //(https://owasp.org/www-community/password-special-characters) 
 
-
+//group randoms as randomFunc 
 function getRandomLower(){
   return String.char(Math.floor(Math.random() * 26) + 97);
 }
