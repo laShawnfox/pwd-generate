@@ -1,14 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
 //need prompt
 // var generatePassword = prompt("How many characters would you like your password to contain?")
 
-//  alert(Click OK to confirm including special characters.);...name getRandomSpecial
-// alert(Click OK to confirm including numeric characters.);....name  getRandomNUmber
-//   alert(Click OK to confirm including lowercase characters);...name getRandomLower
-//   alert(Click OK to confirm including uppercase characters.);...name getRandomUpper  
-function getRandomLower(){
+
   var containPassword = prompt("How many characters would you like your password to contain?");
 //if (password < 8 && >128)
 // alert ("Password must be 8 more characters and no more than 128 characters!"); /or should i document.write this
@@ -52,6 +49,7 @@ console.log(getRandomSpecial());
 //        getRandomLower(); getRandomUpper();getRandomNumber();getRandomSpecial();
 // }
 // randomFunc ();
+// OR do I move the functions into getRandomSpecial
 
 
 function generatePassword() {
