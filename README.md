@@ -7,3 +7,10 @@
  ## Usage 
   The user will be prompted to answer a question and then proceed after he/she has implemented their answers. Soon after the user has placed their inputs and pressed the Generate Password button, a password will be displayed with the amount of characters from the user's decision prior to pressing the button.  
 
+ ## Credits
+  
+Traversy Media https://www.youtube.com/watch?v=duNmhKgtcsI
+
+Browser Character Set https://net-comber.com/charset.html
+
+Password Special Characters https://owasp.org/www-community/password-special-characters
