@@ -52,6 +52,15 @@ console.log(getRandomSpecial());
 // randomFunc ();
 // OR do I move the functions into getRandomSpecial
 
+//Do we need to loop through all random functions?
+// var randomFuncEl = document.querySelector("random");
+// for(var i = 0; i < randomFuncEl.length; i++){
+ //  getRandomLower(); getRandomUpper();getRandomNumber();getRandomSpecial();
+//    }
+
+//loop through special?
+//var specialEl = document.querySElector("special");
+// for(var i = 0; i < specialsEl.length; i++)
 
 function generatePassword() {
    return "This will be replaced by my generated password."; 
