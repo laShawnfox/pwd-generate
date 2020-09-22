@@ -7,8 +7,9 @@ var generateBtn = document.querySelector("#generate");
 
 
   var containPassword = prompt("How many characters would you like your password to contain?");
-//if (password < 8 && >128)
-// alert ("Password must be 8 more characters and no more than 128 characters!"); /or should i document.write this
+  if (password < 8 && 128)
+alert ("Password must be 8 more characters and no more than 128 characters!"); 
+///or should i document.write this
 //var containPassword = prompt("How many characters would you like your password to contain?");
 alert("Click OK to confirm including special characters.");
 alert("Click OK to confirm including numeric characters.");
@@ -41,7 +42,7 @@ function getRandomNumber(){
 }
 function getRandomSpecial(){
   var special = '!#$%&*@';	
-  return (special[Math.floor(Math.random() * special.length));
+  return special(Math.floor(Math.random() * special.length));
 }
 console.log(getRandomSpecial());
 //call all random functions
