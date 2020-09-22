@@ -1,20 +1,16 @@
-// Assignment Code
+let numbers = [0,1,2,3,4,6,7,8,9]
+let specials = ['!','#','$','%']
+let lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+let uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+
+
+
 var generateBtn = document.querySelector("#generate");
 
 
-//need prompt
-// var generatePassword = prompt("How many characters would you like your password to contain?")
-
-
-  var containPassword = prompt("How many characters would you like your password to contain?");
-  if (password < 8 && 128)
-alert ("Password must be 8 more characters and no more than 128 characters!"); 
-///or should i document.write this
-//var containPassword = prompt("How many characters would you like your password to contain?");
-alert("Click OK to confirm including special characters.");
-alert("Click OK to confirm including numeric characters.");
-alert("Click OK to confirm including lowercase characters");
-alert("Click OK to confirm including uppercase characters.");
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 // Write password to the #password input
@@ -24,47 +20,34 @@ function writePassword() {
 
   passwordText.value = password;
 }
-//generate character functions https://net-comber.com/charset.html 
-//(https://owasp.org/www-community/password-special-characters) 
-
-//group randoms as randomFunc 
-function getRandomLower(){
-  return String.char(Math.floor(Math.random() * 26) + 97);
-}
-
-function getRandomUpper(){
-  return String.char(Math.floor(Math.random() * 26) + 65);
-}
-
-function getRandomNumber(){
-  return Math.floor((Math.random() * 128) +8);
-
-}
-function getRandomSpecial(){
-  var special = '!#$%&*@';	
-  return special(Math.floor(Math.random() * special.length));
-}
-console.log(getRandomSpecial());
-//call all random functions
-// randomFunc (){
-//        getRandomLower(); getRandomUpper();getRandomNumber();getRandomSpecial();
-// }
-// randomFunc ();
-// OR do I move the functions into getRandomSpecial
-
-//Do we need to loop through all random functions?
-// var randomFuncEl = document.querySelector("random");
-// for(var i = 0; i < randomFuncEl.length; i++){
- //  getRandomLower(); getRandomUpper();getRandomNumber();getRandomSpecial();
-//    }
-
-//loop through special?
-//var specialEl = document.querySElector("special");
-// for(var i = 0; i < specialsEl.length; i++)
 
 function generatePassword() {
-   return "This will be replaced by my generated password."; 
-   }
+  var containPassword = prompt("How many characters would you like your password to contain?");
+  if (containPassword < 8 && 128){
+    alert ("Password must be 8 more characters and no more than 128 characters!"); 
+     containPassword = prompt("How many characters would you like your password to contain?");
+  }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+///or should i document.write this
+
+var special = confirm("Click OK to confirm including special characters.");
+var numeric = confirm("Click OK to confirm including numeric characters.");
+var lowercase = confirm("Click OK to confirm including lowercase characters");
+var uppercase = confirm("Click OK to confirm including uppercase characters.");
+
+console.log("Saved options for password generation", special, numeric, lowercase, uppercase)
+var passwordVariables = []
+if (special) {
+ // add special characters to the the passwordVariables array
+ passwordVariables.concat(special)
+}
+
+
+}
+
+
+
+// after password variables is populated then 
+// you will need to select a random index from they array 
+// as many times as the password length
+
