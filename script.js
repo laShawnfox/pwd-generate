@@ -1,5 +1,5 @@
-let numbers = [0,1,2,3,4,6,7,8,9]
-let specials = ['!','#','$','%']
+let numeric = [0,1,2,3,4,6,7,8,9]
+let symbols = ['!','#','$','%']
 let lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 let uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 
@@ -22,49 +22,68 @@ function writePassword() {
 }
 
 function generatePassword() {
-  var containPassword = prompt("How many characters would you like your password to contain?");
-  if (containPassword < 8 && 128){
-    alert ("Password must be at least 8 characters and no more than 128 characters!"); 
+    var containPassword = prompt("How many characters would you like your password to contain?");
+   
+    if (containPassword < 8 && 128) {
+    
+      alert ("Password must be at least 8 characters and no more than 128 characters!"); 
+
      containPassword = prompt("How many characters would you like your password to contain?");
-  }
+    }
 
-var special = confirm("Click OK to confirm including special characters.");
+var symbols = confirm("Click OK to confirm including special characters.");
+
 var numeric = confirm("Click OK to confirm including numeric characters.");
+
 var lowercase = confirm("Click OK to confirm including lowercase characters");
+
 var uppercase = confirm("Click OK to confirm including uppercase characters.");
+} 
 
-//console.log("Saved options for password generation", special, numeric, lowercase, uppercase)
-
-var typesCount =  [specials + numeric + lowercase + uppercase]
-if(typesCount === 0) {
-   return '';
-}
-
-// for( var i = 0; i < typesCount.length; i++) {
-// 
-// }
-//
-// 
-
+//console.log("Saved options for password generation", special, numeric, lowercase, uppercase);
 var passwordVariables = []
-if (special) {
- // add special characters to the the passwordVariables array
- passwordVariables.concat(special)
+if (symbols) {
+ // add symbol characters to the the passwordVariables array
+ passwordVariables.concat(symbols)
 } 
 
 if (numeric) {
-  // add special characters to the the passwordVariables array
+  // add numeric characters to the the passwordVariables array
   passwordVariables.concat(numeric)
  } 
  if (lowercase) {
-  // add special characters to the the passwordVariables array
+  // add lowercase characters to the the passwordVariables array
   passwordVariables.concat(lowercase)
  } 
  if (uppercase) {
-  // add special characters to the the passwordVariables array
+  // add uppercase characters to the the passwordVariables array
   passwordVariables.concat(uppercase)
  } 
 
+//if (symbols + numeric + lowercase + uppercase ===0){
+  //return;
+//}
+
+ function getSymbols () {
+  var symbols = ['!','#','$','%'];
+  return symbols[Math.floor(Math.random () * symbols.length)];
+  }
+//console.log(getSymbols());
+
+ function getNumeric () {
+    return String.fromCharCode(Math.floor(Math.random () * 10) + 48);
+ }
+    //console.log(getNumeric)
+
+  
+function getLowercase() {
+  return String.fromCharCode(Math.floor(Math.random () * 26) + 97); 
 }
 
+//console.log(getLowercase());
+
+
+function getUppercase () {
+   return String.fromCharCode(Math.floor(Math.random () * 26) + 65);  
+}
 
