@@ -24,11 +24,9 @@ function writePassword() {
 function generatePassword() {
   var containPassword = prompt("How many characters would you like your password to contain?");
   if (containPassword < 8 && 128){
-    alert ("Password must be 8 more characters and no more than 128 characters!"); 
+    alert ("Password must be at least 8 characters and no more than 128 characters!"); 
      containPassword = prompt("How many characters would you like your password to contain?");
   }
-
-///or should i document.write this
 
 var special = confirm("Click OK to confirm including special characters.");
 var numeric = confirm("Click OK to confirm including numeric characters.");
