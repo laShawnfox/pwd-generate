@@ -35,26 +35,36 @@ var uppercase = confirm("Click OK to confirm including uppercase characters.");
 
 //console.log("Saved options for password generation", special, numeric, lowercase, uppercase)
 
-var typesCount =  special + numeric + lowercase + uppercase
+var typesCount =  [specials + numeric + lowercase + uppercase]
 if(typesCount === 0) {
    return '';
 }
 
+// for( var i = 0; i < typesCount.length; i++) {
+// 
+// }
+//
+// 
 
 var passwordVariables = []
 if (special) {
  // add special characters to the the passwordVariables array
  passwordVariables.concat(special)
-} else {
+} 
+
+if (numeric) {
+  // add special characters to the the passwordVariables array
+  passwordVariables.concat(numeric)
+ } 
+ if (lowercase) {
+  // add special characters to the the passwordVariables array
+  passwordVariables.concat(lowercase)
+ } 
+ if (uppercase) {
+  // add special characters to the the passwordVariables array
+  passwordVariables.concat(uppercase)
+ } 
 
 }
 
-
-}
-
-
-
-// after password variables is populated then 
-// you will need to select a random index from they array 
-// as many times as the password length
 
