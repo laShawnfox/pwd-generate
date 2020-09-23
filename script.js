@@ -4,7 +4,7 @@ let lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p'
 let uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 
 
-
+ 
 
 var generateBtn = document.querySelector("#generate");
 
@@ -33,11 +33,20 @@ var numeric = confirm("Click OK to confirm including numeric characters.");
 var lowercase = confirm("Click OK to confirm including lowercase characters");
 var uppercase = confirm("Click OK to confirm including uppercase characters.");
 
-console.log("Saved options for password generation", special, numeric, lowercase, uppercase)
+//console.log("Saved options for password generation", special, numeric, lowercase, uppercase)
+
+var typesCount =  special + numeric + lowercase + uppercase
+if(typesCount === 0) {
+   return '';
+}
+
+
 var passwordVariables = []
 if (special) {
  // add special characters to the the passwordVariables array
  passwordVariables.concat(special)
+} else {
+
 }
 
 
