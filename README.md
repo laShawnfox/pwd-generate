@@ -9,7 +9,6 @@
 
  ## Credits
   
-Traversy Media https://www.youtube.com/watch?v=duNmhKgtcsI
 
 Browser Character Set https://net-comber.com/charset.html
 
