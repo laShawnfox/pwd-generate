@@ -1,7 +1,7 @@
-let numeric = ["0,1,2,3,4,6,7,8,9"]
-let symbols = ['!','#','$','%']
-let lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-let uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+var numeric = ["0,1,2,3,4,6,7,8,9"]
+var symbols = ['!','#','$','%']
+var lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+var uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 
 
 var generateBtn = document.querySelector("#generate");
@@ -10,18 +10,15 @@ var passwordText = document.querySelector("#password");
 
 passwordText.value = password;
 
-
-//function writePassword() {
- // var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
-
-  //passwordText.value = password;
-//}
-
-//function generatePassword()
-
 // Write password to the #password input
-function writePassword()  {
+function writePassword() {
+ var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
+
+function generatePassword() {
  
     var containPassword = prompt("How many characters would you like your password to contain?");
    
@@ -30,6 +27,10 @@ function writePassword()  {
       alert ("Password must be at least 8 characters and no more than 128 characters!"); 
 
      containPassword = prompt("How many characters would you like your password to contain?");
+    }
+
+    if (isNaN(x) === true) {
+      return "Not a number!";
     }
 
 var symbols = confirm("Click OK to confirm including special characters.");
@@ -44,23 +45,21 @@ var uppercase = confirm("Click OK to confirm including uppercase characters.");
 
 //console.log("Saved options for password generation", special, numeric, lowercase, uppercase);
 
-var passwordVariables = "";
+var passwordVariables = ["symbols","numeric","lowercase","uppercase"];
 if (symbols) {
  // add symbol characters to the the passwordVariables array
- passwordVariables.concat(symbols)
+ passwordVariables.concat(symbols);
 } 
 
 if (numeric) {
-  // add numeric characters to the the passwordVariables array
-  passwordVariables.concat(numeric)
+  passwordVariables.concat(numeric);
  } 
+
  if (lowercase) {
-  // add lowercase characters to the the passwordVariables array
-  passwordVariables.concat(lowercase)
+  passwordVariables.concat(lowercase);
  } 
  if (uppercase) {
-  // add uppercase characters to the the passwordVariables array
-  passwordVariables.concat(uppercase)
+  passwordVariables.concat(uppercase);
  } 
   
 //if (symbols + numeric + lowercase + uppercase === 0){
@@ -97,6 +96,7 @@ for(var i = 0; i < passwordVariables.length; i++) {
 function generatePassword(){
   console.log("A string for the password");
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

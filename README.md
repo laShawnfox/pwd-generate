@@ -14,3 +14,4 @@ Traversy Media https://www.youtube.com/watch?v=duNmhKgtcsI
 Browser Character Set https://net-comber.com/charset.html
 
 Password Special Characters https://owasp.org/www-community/password-special-characters
+
