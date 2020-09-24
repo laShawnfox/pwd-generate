@@ -10,13 +10,7 @@ var passwordText = document.querySelector("#password");
 
 passwordText.value = password;
 
-// Write password to the #password input
-function writePassword() {
- var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-}
 
 function generatePassword() {
  
@@ -29,9 +23,7 @@ function generatePassword() {
      containPassword = prompt("How many characters would you like your password to contain?");
     }
 
-    if (isNaN(x) === true) {
-      return "Not a number!";
-    }
+
 
 var symbols = confirm("Click OK to confirm including special characters.");
 
@@ -40,7 +32,7 @@ var numeric = confirm("Click OK to confirm including numeric characters.");
 var lowercase = confirm("Click OK to confirm including lowercase characters");
 
 var uppercase = confirm("Click OK to confirm including uppercase characters.");
-} 
+//} 
 
 
 //console.log("Saved options for password generation", special, numeric, lowercase, uppercase);
@@ -62,10 +54,6 @@ if (numeric) {
   passwordVariables.concat(uppercase);
  } 
   
-//if (symbols + numeric + lowercase + uppercase === 0){
-  //return;
-//}
-
 
  function getSymbols () {
   var symbols = ['!','#','$','%'];
@@ -91,12 +79,15 @@ function getUppercase () {
 for(var i = 0; i < passwordVariables.length; i++) {
   var char = Math.floor(Math.random() * passwordVariables[i]);
 };
-
-
-function generatePassword(){
-  console.log("A string for the password");
 }
 
+ // Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+   var passwordText = document.querySelector("#password");
+ 
+   passwordText.value = password;
+ }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
